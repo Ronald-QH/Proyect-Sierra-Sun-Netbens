@@ -1,0 +1,28 @@
+/*tables styles*/
+table {
+  background: ;
+}
+#table-1 {
+  background: rgb(59, 180, 196);
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+/*tables styles end*/
+/*STYLOS TABLAS DE BANDEJA DE ENTRADA*/
+/*-------------------------------------*/
+#tabla-Correos {
+
+}
+
+#tabla-Correos-head {
+  background-color: rgb(26, 22, 40);
+}
+
+#tabla-Correos-body {
+  background-color: rgb(255, 250, 215) ;
+}

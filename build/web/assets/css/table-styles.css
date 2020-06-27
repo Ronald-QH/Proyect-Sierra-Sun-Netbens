@@ -1,0 +1,34 @@
+/*tables styles*/
+table {
+  background: ;
+}
+table thead th {
+  color: white;
+  background: #343a40!important;
+}
+
+table tbody tr {
+  border-radius: 16px;
+  background: #343a40 !important;
+}
+
+table tbody td {
+  color: white;
+  background: #343a40 !important;
+}
+
+table tfoot {
+  background: #343a40!important;
+  color: white;
+}
+
+#table-1 {
+  background: red;
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+/*tables styles end*/

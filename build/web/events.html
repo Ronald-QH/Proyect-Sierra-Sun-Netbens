@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Eventos-Sierra Sun</title>
+  <!--Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Bootstrap CSS -->
+  <link rel="stylesheet" href="Boostrap\css\bootstrap.min.css">
+  <!--Custom styles-->
+  <link rel="stylesheet" href="assets\css\Eventos.css" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/table-styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Tables\datatables.min.css">
+  <link rel="stylesheet" type="text/css" href="Tables\dataTables.bootstrap4.css">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex" id="content-wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light border-right">
+      <!--<div class="logo">
+        <h4 class="font-weight-bold mb-0">Templune</h4>
+      </div>-->
+      <div class="menu list-group-flush">
+        <a href="Index.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
+        <a href="finances.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
+        <a href="events.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
+        <a href="E-mail.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+        <a href="requesment.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Requerimientos</a>
+        <a href="settings.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
+      </div>
+    </div>
+    <!-- Sidebar end-->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="w-100 bg-light-blue">
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
+        <div class="container">
+          <button class="btn btn-outline-info text-white my-2 my-sm-0" id="menu-toggle"><i class="text-white fas fa-bars"></i> Sidebar</button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" style="margin-bottom: 0px;">
+                  <button class="btn btn-outline-info text-white my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Usuario
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Mi perfil</a>
+                  <a class="dropdown-item" href="#">Archivos</a>
+                  <div class="dro
+
+                  pdown-divider"></div>
+                  <a class="dropdown-item" href="Login.html">Cerrar sesión</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav bar end -->
+      <div id="content" class="container-fluid">
+        <section class="py-3" id="Conten_main_page">
+          <div class="row">
+
+          </div>
+          <div class="row">
+            <!-- INCIO DEL TABLA DE EVENTOS -->
+            <div class="container col-sm-10">
+              <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                <img class="mr-3" src="assets\img\Logotipo.png" alt="" width="70" height="70">
+                <div class="lh-100">
+                  <h2 class=" mb-0 text-white lh-100 h1 ">Gastos y Presupuestos</h2>
+                  <small class="small-color">Area de logística y almacén 2020</small>
+                </div>
+              </div>
+
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item h5 nav-link text-info active font-weight-bold" id="nav-areas-tab" data-toggle="tab" href="#nav-areas" role="tab" aria-controls="nav-areas" aria-selected="true">Areas</a>
+                  <a class="nav-item h5 nav-link text-info font-weight-bold" id="nav-presupuestos-tab" data-toggle="tab" href="#nav-presupuestos" role="tab" aria-controls="nav-presupuestos" aria-selected="false">Presupuestos</a>
+                  <a class="nav-item h5 nav-link text-info font-weight-bold" id="nav-actividades-tab" data-toggle="tab" href="#nav-actividades" role="tab" aria-controls="nav-actividades" aria-selected="false">Actividades</a>
+                  <a class="nav-item h5 nav-link text-info font-weight-bold" id="nav-costos-tab" data-toggle="tab" href="#nav-costos" role="tab" aria-controls="nav-costos" aria-selected="false">Costos</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <!-- INCIO DE LISTA DE AREAS -->
+                <div class="tab-pane fade show active" id="nav-areas" role="tabpanel" aria-labelledby="nav-areas-tab"><br>
+                  <h3 class="text-white ">Lista de Areas</h3>
+                  <!-- INICIO DE LOS COLLAPSE -->
+                  <div class="accordion" id="accordionExampleArea">
+                    <div class="card">
+                      <div class="card-header" id="headingOneArea">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneArea" aria-expanded="true" aria-controls="collapseOneArea">
+                            <a class="h5 text-dark">Area #1</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #1 -->
+                      <div id="collapseOneArea" class="collapse show" aria-labelledby="headingOneArea" data-parent="#accordionExampleArea">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingTwoArea">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoArea" aria-expanded="false" aria-controls="collapseTwoArea">
+                            <a class="h5 text-dark">Area #2</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #2 -->
+                      <div id="collapseTwoArea" class="collapse" aria-labelledby="headingTwoArea" data-parent="#accordionExampleArea">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingThreeArea">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeArea" aria-expanded="false" aria-controls="collapseThreeArea">
+                            <a class="h5 text-dark">Area #3</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #3 -->
+                      <div id="collapseThreeArea" class="collapse" aria-labelledby="headingThreeArea" data-parent="#accordionExampleArea">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FIN DE LOS COLLAPSE -->
+                </div>
+
+                <!-- INCIO DE LISTA DE PRESUPUESTOS -->
+                <div class="tab-pane fade" id="nav-presupuestos" role="tabpanel" aria-labelledby="nav-presupuestos-tab"><br>
+                  <h3 class="text-white">Lista de Presupuestos</h3>
+                  <!-- INICIO DE LOS COLLAPSE -->
+                  <div class="accordion" id="accordionExamplePresupuestos">
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingOnePresupuestos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePresupuestos" aria-expanded="true" aria-controls="collapseOnePresupuestos">
+                            <a class="h5 text-dark">Presupuesto #1</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #1 -->
+                      <div id="collapseOnePresupuestos" class="collapse show" aria-labelledby="headingOnePresupuestos" data-parent="#accordionExamplePresupuestos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingTwoPresupuestos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPresupuestos" aria-expanded="false" aria-controls="collapseTwoPresupuestos">
+                            <a class="h5 text-dark">Presupuesto #2</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #2 -->
+                      <div id="collapseTwoPresupuestos" class="collapse" aria-labelledby="headingTwoPresupuestos" data-parent="#accordionExamplePresupuestos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingThreePresupuestos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreePresupuestos" aria-expanded="false" aria-controls="collapseThreePresupuestos">
+                            <a class="h5 text-dark">Presupuesto #3</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #3 -->
+                      <div id="collapseThreePresupuestos" class="collapse" aria-labelledby="headingThreePresupuestos" data-parent="#accordionExamplePresupuestos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FIN DE LOS COLLAPSE -->
+                </div>
+
+                <!-- INCIO DE LISTA DE ACTIVIDDES -->
+                <div class="tab-pane fade" id="nav-actividades" role="tabpanel" aria-labelledby="nav-actividades-tab"><br>
+                  <h3 class="text-white">Lista de Actividades</h3>
+                  <!-- INICIO DE LOS COLLAPSE -->
+                  <div class="accordion" id="accordionExampleActividades">
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingOneActividades">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneActividades" aria-expanded="true" aria-controls="collapseOneActividades">
+                            <a class="h5 text-dark">Actividad #1</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #1 -->
+                      <div id="collapseOneActividades" class="collapse show" aria-labelledby="headingOneActividades" data-parent="#accordionExampleActividades">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingTwoActividades">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoActividades" aria-expanded="false" aria-controls="collapseTwoActividades">
+                            <a class="h5 text-dark">Actividad #2</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #2 -->
+                      <div id="collapseTwoActividades" class="collapse" aria-labelledby="headingTwoActividades" data-parent="#accordionExampleActividades">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingThreeActividades">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeActividades" aria-expanded="false" aria-controls="collapseThreeActividades">
+                            <a class="h5 text-dark">Actividad #3</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #3 -->
+                      <div id="collapseThreeActividades" class="collapse" aria-labelledby="headingThreeActividades" data-parent="#accordionExampleActividades">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FIN DE LOS COLLAPSE -->
+                </div>
+
+                <!-- INCIO DE LISTA DE COSTOS -->
+                <div class="tab-pane fade" id="nav-costos" role="tabpanel" aria-labelledby="nav-costos-tab"><br>
+                  <h3 class="text-white">Lista de Costos</h3>
+                  <!-- INICIO DE LOS COLLAPSE -->
+                  <div class="accordion" id="accordionExampleCostos">
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingOneCostos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneCostos" aria-expanded="true" aria-controls="collapseOneCostos">
+                            <a class="h5 text-dark">Costo #1</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #1 -->
+                      <div id="collapseOneCostos" class="collapse show" aria-labelledby="headingOneCostos" data-parent="#accordionExampleCostos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingTwoCostos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoCostos" aria-expanded="false" aria-controls="collapseTwoCostos">
+                            <a class="h5 text-dark">Costo #2</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #2 -->
+                      <div id="collapseTwoCostos" class="collapse" aria-labelledby="headingTwoCostos" data-parent="#accordionExampleCostos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header bg-secondary" id="headingThreeCostos">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeCostos" aria-expanded="false" aria-controls="collapseThreeCostos">
+                            <a class="h5 text-dark">Costo #3</a>
+                          </button>
+                        </h2>
+                      </div>
+                      <!-- CONTENIDO DEL COLLAPSE AREA #3 -->
+                      <div id="collapseThreeCostos" class="collapse" aria-labelledby="headingThreeCostos" data-parent="#accordionExampleCostos">
+
+                        <!-- TABLA DE EVENTOS -->
+                        <div class="my-3 p-3 bg-light rounded shadow-sm">
+                          <h6 class="border-bottom border-gray pb-2 mb-0">Avances Recientes</h6>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                              <strong class="d-block text-gray-dark">@username</strong>
+                              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                            </p>
+                          </div>
+                          <small class="d-block text-right mt-3">
+                            <a href="#">Todos los Avances</a>
+                          </small>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FIN DE LOS COLLAPSE -->
+                </div>
+              </div><br>
+
+              <!-- AREA DE SUPERVISORES -->
+              <div class="panel panel-default">
+                <div class="Area-SupV my-3 p-3 rounded shadow-sm">
+                  <h6 class="border-bottom border-gray h3 pb-2 mb-0">Area de Supervisores</h6>
+                  <div class="media text-muted pt-3">
+                    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                    </svg>
+                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                      <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark">Full Name</strong>
+                        <a href="#">Enviar reporte al E-mail</a>
+                      </div>
+                      <span class="d-block">@username</span>
+                    </div>
+                  </div>
+                  <div class="media text-muted pt-3">
+                    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                    </svg>
+                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                      <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark">Full Name</strong>
+                        <a href="#">Enviar reporte al E-mail</a>
+                      </div>
+                      <span class="d-block">@username</span>
+                    </div>
+                  </div>
+                  <div class="media text-muted pt-3">
+                    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
+                    </svg>
+                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                      <div class="d-flex justify-content-between align-items-center w-100">
+                        <strong class="text-gray-dark">Full Name</strong>
+                        <a href="#">Enviar reporte al E-mail</a>
+                      </div>
+                      <span class="d-block">@username</span>
+                    </div>
+                  </div>
+                  <small class="d-block text-right mt-3">
+                    <a href="Decarga_PDF\Guía del Estudiante.pdf" download="Prueva_1.pdf">Todos Los Reportes</a>
+                  </small>
+                </div>
+              </div>
+              <!-- FIN AREA DE SUPERVISORES -->
+            </div>
+
+          </div><br><br><br><br>
+
+        </section>
+      </div>
+    </div>
+
+
+    <!-- Fin Page Content -->
+  </div>
+
+
+
+
+  <!-- Fin wrapper -->
+
+  <!--Vue.js-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!--then Bootstrap JS-->
+  <script src="Boostrap/js/jquery.js"></script>
+  <script src="Boostrap/js/bootstrap.min.js"></script>
+  <!--Chart sj-->
+  <script src="Chartjs\dist\Chart.js"></script>
+  <script src="assets\js\main.js"></script>
+  <!--<script src="assets\js\graphics.js"></script>-->
+  <!--Customise scripts-->
+  <script type="text/javascript" src="Tables\datatables.min.js"></script>
+  <script type="text/javascript" src="Tables\dataTables.bootstrap4.js"></script>
+  <script src="assets/js/tables.js"></script>
+  <!--icons-->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+
+</html>

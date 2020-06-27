@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Project-Sierra Sun</title>
+  <!--Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Bootstrap CSS -->
+  <link rel="stylesheet" href="Boostrap\css\bootstrap.min.css">
+  <!--Custom styles-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex container-fluid" id="content-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light border-right">
+      <!--<img id="icons-sidebar" style="width: 290px; padding-right: 60px;" src="assets\img\Icon.png">-->
+      <div class="menu list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-user-circle lead mr-2"></i> Usuarios</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Datos</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
+      </div>
+    </div>
+    <!-- Sidebar end-->
+    <!-- Page Content-->
+    <div id="page-content-wrapper" class="w-100 bg-dar-blue main" style="background: ">
+      <!--Nav bar content page-->
+      <header class="header container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
+          <button class="btn btn-outline-info text-white" id="menu-toggle"><i class="fas fa-bars"></i> Mostrar / esconder menu</button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" style="margin-bottom: 0px;">
+                  <button class="btn btn-outline-info text-white my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="#">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Usuario
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Mi perfil</a>
+                  <a class="dropdown-item" href="#">Suscripciones</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="Login.html">Cerrar sesión</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--Nav bar content page end-->
+      <!--Content body-page-->
+      <main class="main">
+        <section class="py-3">
+          <div class="container-fluid">
+            <!--Graphic-->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-chart bg-dark" id="Graphic-card">
+                  <div class="card-header">
+                    <div class="row" style="color: white;">
+                      <div class="col-sm-6">
+                        <h5 class="card-title" style="color: white">Titulo</h5>
+                        <p class="card-text">Graphic</p>
+                      </div>
+                      <div class="col-sm-6" style="padding-right: 0px;">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-outline-danger btns-custom btn-simple active active-card">
+                            <input type="radio" name="options" id="option1" checked>
+                            <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Opcion1</span>
+                            <span class="d-block d-sm-none">
+                              <i class="tim-icons	fas fa-chart-bar"></i>
+                            </span>
+                          </label>
+                          <label class="btn btn-outline-danger btns-custom">
+                            <input type="radio" name="options" id="option2">
+                            <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Opcion2</span>
+                            <span class="d-block d-sm-none">
+                              <i class="tim-icons	fas fa-chart-line"></i>
+                            </span>
+                          </label>
+                          <label class="btn btn-outline-danger btns-custom">
+                            <input type="radio" name="options" id="option3">
+                            <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Opcion3</span>
+                            <span class="d-block d-sm-none">
+                              <i class="tim-icons	fas fa-chart-pie"></i>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="lineChartExample" class="" width="1676" height="440" class="chartjs-render-monitor" style="display: block; height: 220px; width: 838px;">
+                      </canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Graphic end-->
+        <!--data table and mensaje-minimenu-->
+        <section id="table-1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-7 col-lg-12">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th colspan="2"><small class="font-weight-bold">Usuarios<small></th>
+                        <th scope="col"><small class="font-weight-bold">Estatus<small></th>
+                        <th scope="col"><small class="font-weight-bold">Configuración<small></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="shadow-sm">
+                        <td><i class="fas fa-user-circle lead mr-2"></i></td>
+                        <td><span class="d-block">Cristian</span><small class="text-muted">cristian@templune.com</small>
+                        </td>
+                        <td class="align-middle"><span class="badge badge-primary text-primary">Activo</span></td>
+                        <td class="align-middle"><span class="badge badge-secondary">Editar <i class="icon ion-md-settings ml-2"></i></span></td>
+                      </tr>
+                      <tr class="shadow-sm">
+                        <td><i class="fas fa-user-circle lead mr-2"></i></td>
+                        <td><span class="d-block">Diego</span><small class="text-muted">diego@templune.com</small></td>
+                        <td class="align-middle"><span class="badge badge-primary text-primary">Activo</span></td>
+                        <td class="align-middle"><span class="badge badge-secondary">Editar <i class="icon ion-md-settings ml-2"></i></span></td>
+                      </tr>
+                      <tr class="shadow-sm">
+                        <td><i class="fas fa-user-circle lead mr-2"></i></td>
+                        <td><span class="d-block">Irina</span><small class="text-muted">irina@templune.com</small></td>
+                        <td class="align-middle"><span class="badge badge-primary text-primary">Activo</span></td>
+                        <td class="align-middle"><span class="badge badge-secondary">Editar <i class="icon ion-md-settings ml-2"></i></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!--data table and mensaje-minimenu end-->
+
+
+
+
+
+
+
+      </main>
+
+
+
+
+
+
+
+
+
+
+      <!--Content body-page end-->
+    </div>
+    <!-- Page Content end-->
+
+
+
+
+
+
+
+  </div>
+
+
+
+  <!--Vue.js-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!--then Bootstrap JS-->
+  <script src="Boostrap/js/jquery.js"></script>
+  <script src="Boostrap/js/bootstrap.min.js"></script>
+  <!--Chart sj-->
+  <script src="Chartjs\dist\Chart.js"></script>
+  <script src="assets\js\main.js"></script>
+  <script src="assets\js\graphics.js"></script>
+  <!--Customise scripts-->
+  <!--icons-->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+
+</html>

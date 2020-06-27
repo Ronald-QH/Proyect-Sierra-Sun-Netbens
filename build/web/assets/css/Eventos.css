@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #34495e;
+}
+
+.container-fluid {
+  /*background-image: url("../img/Montan_xl.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed; */
+  background-color: #f5f6fa;
+}
+
+.small-color {
+  color: #34495e;
+  font-weight: bold;
+}
+
+.container {
+  background: rgba(44, 62, 80, 0.7);
+  top: 40px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.card-header {
+  background-image: url("../img/Front_2.jpg");
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.collapse {
+  background: rgba(45, 52, 54, 0.3);
+}
+
+.Area-SupV {
+  background: rgba(238, 238, 238, 1.0);
+}
