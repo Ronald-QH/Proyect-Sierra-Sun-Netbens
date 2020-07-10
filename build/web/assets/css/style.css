@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
   font-weight: 700;
 }
+h6{
+  color: white !important;
+}
 
 .text-muted {
   color: var(--primary) !important;
@@ -43,8 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar-container {
+  background-image: url(../img/sidebarContainer.jpg) !important;
+  background-size: 130% ;
+  background-position: bottom !important;
   min-height: 100vh;
-  margin-left: -18rem;
+  margin-left: -20rem;
   -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -55,13 +61,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar-container .logo {
-  padding: 0.875rem 1.25rem;
+  width: 98%;
 }
 
 #sidebar-container .menu {
-  width: 18rem;
+  width: 15rem;
 }
 
+#sidebar-container .menu a{
+  /*color: #fff  !important;*/
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+#sidebar-container .menu a:hover{
+background: rgba(105, 105, 105, 0.5);
+}
 #content-wrapper.toggled #sidebar-container {
   margin-left: 0;
 }
@@ -81,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   #content-wrapper.toggled #sidebar-container {
-    margin-left: -18rem;
+    margin-left: -20.2rem;
   }
 }
 
@@ -93,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Sidebar styles end*/
-
 /*Styles container*/
 .container-fluid {
   padding-right: 0px !important;
@@ -108,14 +123,21 @@ h1, h2, h3, h4, h5, h6 {
   height: 220px;
   width: 100%;
 }*/
+#page-content-wrapper{
+  width: 100%;
+  background: url(assets/img/ji.jpg) !important;
+   background-size: 100% !important;
+}
+
 #page-content-wrapper>.content {
   padding: 80px 30px 30px 280px;
   min-height: calc(100vh - 70px);
+
 }
 
 @media (min-width: 992px) {
   .toggled #page-content-wrapper>#content, .toggled footer {
-        width: 99%;
+    width: 99%;
     ;
   }
 }
@@ -126,9 +148,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 98.8%;
 }
 
-@media (min-width: 1200px){
-.container {
-    max-width: 2560px;}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 2560px;
+  }
 }
 
 #Graphic-card {
@@ -140,6 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Styles container end*/
+
 /*Butons styles*/
 .bg-primary, .badge-primary {
   background-color: rgba(0, 123, 255, .1) !important;
@@ -171,12 +195,12 @@ h1, h2, h3, h4, h5, h6 {
 .btns-custom:not(:disabled):not(.disabled).active,
 .btns-custom:not(:disabled):not(.disabled):active, .show>.btns-custom.dropdown-toggle {
   color: #fff;
-  background-color: rgb(251, 48, 48);
-  border-color: #ff0000;
+  background-color:rgb(47, 174, 190);
+  border-color: rgb(47, 174, 190);
 }
 
 .btns-custom:hover {
-  background: firebrick !important;
+  background: rgb(47, 174, 190) !important;
 }
 
 @media (min-width: 576px) {
@@ -216,3 +240,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Butons styles*/
+
+/*STYLES VANDEJA DE ENTRAD-BOTONES DESPLEGABLES*/
+#headingOne {
+  padding: 0 !important;
+}
+
+#boton-bandeja {
+  padding: 0 !important;
+}
+
+.accordion{
+  background-color: rgba(44, 62, 80, 0.1) !important;
+}
+
+/*STYLES DEL DESPLEGABLE (BANDEJA DE ENTRADA) APARTADO SUB-MENU   */
+.card-body{
+  background-color: rgba(44, 62, 80, 0.1) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.mtextA{
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.mtextB{
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.mtext{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}

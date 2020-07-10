@@ -32,28 +32,29 @@
         </div>
         <!--User img end-->
         <!--login data-->
-        <form class="col-12" method="get">
+        <form class="needs-validation1" novalidate>
           <div class="form-group" id="user-group">
-            <input type="text" class="form-control" placeholder="Nombre de usuario" name="username" />
+            <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" name="username" required>
+            <div class="invalid-feedback">
+              Se necesita un nombre válido.
+            </div>
           </div>
           <div class="form-group" id="contrasena-group">
-            <input type="password" class="form-control" placeholder="Contrasena" name="password" />
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contrasena" name="password" required>
+            <div class="invalid-feedback">
+              Su contraseña es requerida.
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary" href=""><i class="fas fa-sign-in-alt"></i>Ingresar</button>
+          
+        <button type="submit" class="btn btn-primary" href='*'><i class="fas fa-sign-in-alt"></i>Ingresar</button>
         </form>
         <!--login data-->
         <!--recover password-->
         <div class="col-12 forgot">
-          <a href="#">Olvido la contraseña?</a>
+          <a href="forgotPassword.html">Olvido la contraseña?</a>
         </div>
         <!--recover password-->
-        <!--Alerts disconect and incorrect-->
-        <div class="alert alert-danger" role="alert">
-          Invalid username and password.
-        </div>
-        <div class="alert alert-success" role="alert">
-          You have been logged out.
-        </div>
+        
         <!--Alerts disconect and incorrect end-->
       </div>
     </div>
@@ -77,7 +78,9 @@
   <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <!-- Bootstrap JSP -->
   <script src="assets/js/jquery.min.js"></script>
-  <!--JQUERY-->
+  <!--Customise scripts-->
+  <script src="assets/js/tables.js"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 
 </html>

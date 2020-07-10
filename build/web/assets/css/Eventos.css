@@ -5,10 +5,10 @@
 }
 
 .container-fluid {
-  /*background-image: url("../img/Montan_xl.jpg");
+  background-image: url("../img/Montan_xl.jpg");
   background-size: 100% 100%;
-  background-attachment: fixed; */
-  background-color: #f5f6fa;
+  background-attachment: fixed;
+  /*background-color: #f5f6fa;*/
 }
 
 .small-color {
@@ -20,7 +20,11 @@
   background: rgba(44, 62, 80, 0.7);
   top: 40px;
   border-radius: 7px;
-  padding: 5px;
+
+}
+#container-Tabla{
+    padding-left: 15px ;
+    padding-right: 15px ;
 }
 
 .card-header {

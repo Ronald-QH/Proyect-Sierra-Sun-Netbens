@@ -71,6 +71,46 @@ unique key id_Presu (id_Presu));
 alter table Comunidades add constraint fk_ComuPresu foreign key (id_Presupuesto) references Presupuesto (id_Presu) on delete restrict on update cascade;
 
 
+DELIMITER //
+CREATE  PROCEDURE updateArtic(
+IN 	_Codigo_A int,
+	_Nombre varchar(20),
+	_Stock int(10),
+	_Estado varchar(30) ,
+	_Costo_Unidad int(5),
+	_Stock_maximo int (10)
+)
+begin
+update articulos set Nombre=_Nombre , Stock=_Stock , Estado=_Estado , Costo_Unidad=_Costo_Unidad , Stock_maximo=_Stock_maximo where Codigo_A=_Codigo_A;
+end
+// DELIMITER ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

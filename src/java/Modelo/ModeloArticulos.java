@@ -117,15 +117,37 @@ public class ModeloArticulos extends Conexion {
             } catch (Exception e) {
             }
         }
-
         return flag;
-
     }
-    
-    
-    
-    
-    
-    
-    
+
+    public boolean update_articulo(Articulo a) {
+        PreparedStatement pst = null;
+        boolean flag = false;
+        try {
+            String sql = "call updateArtic(?,?,?,?,?,?)";
+            pst = getConnection().prepareStatement(sql);
+            pst.setInt(1, a.getCodigo_A());
+            pst.setString(2, a.getNombre());
+            pst.setInt(3, a.getStock());
+            pst.setString(4, a.getEstado());
+            pst.setInt(5, a.getCosto_Unidad());
+            pst.setInt(6, a.getStock_maximo());
+            if (pst.executeUpdate() == 1) {
+                flag = true;
+            }
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (getConnection() != null) {
+                    getConnection().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+        return flag;
+    }
+
 }

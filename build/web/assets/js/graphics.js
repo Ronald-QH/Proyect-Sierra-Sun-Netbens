@@ -28,7 +28,7 @@ gradientChartOptionsConfiguration =  {
              suggestedMin:50,
              suggestedMax: 110,
                padding: 20,
-               fontColor: "#9a9a9a"
+               fontColor: "rgb(47, 174, 190)"
            }
          }],
 
@@ -41,7 +41,7 @@ gradientChartOptionsConfiguration =  {
            },
            ticks: {
                padding: 20,
-               fontColor: "#9a9a9a"
+               fontColor: "rgb(47, 174, 190)"
            }
          }]
      }
@@ -61,13 +61,13 @@ var data = {
     label: "Data",
     fill: true,
     backgroundColor: gradientStroke,
-    borderColor: '#d048b6',
+    borderColor: 'rgb(250, 228, 35)',
     borderWidth: 2,
     borderDash: [],
     borderDashOffset: 0.0,
-    pointBackgroundColor: '#d048b6',
+    pointBackgroundColor: 'rgb(250, 228, 35)',
     pointBorderColor:'rgba(255,255,255,0)',
-    pointHoverBackgroundColor: '#d048b6',
+    pointHoverBackgroundColor: 'rgb(250, 228, 35)',
     pointBorderWidth: 20,
     pointHoverRadius: 4,
     pointHoverBorderWidth: 15,

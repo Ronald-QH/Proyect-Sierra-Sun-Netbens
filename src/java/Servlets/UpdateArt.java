@@ -5,10 +5,10 @@
  */
 package Servlets;
 
-import Controlador.CArticulos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Renzo
  */
-public class ElimiArticulo extends HttpServlet {
+@WebServlet(name = "UpdateArt", urlPatterns = {"/ModiArti"})
+public class UpdateArt extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,17 +32,12 @@ public class ElimiArticulo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+//       ModiArti
+
         
-        int idartic= Integer.parseInt(request.getParameter("idArtic"));
-        
-        CArticulos ca=new CArticulos();
-        if (ca.deletArticulo(idartic)) {
-            response.getWriter().println("Producto eliminado correctamente");
-            
-        } else {
-            response.getWriter().println("Error recontra gil");
-        }
-        
+
+
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

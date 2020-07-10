@@ -22,23 +22,53 @@
   <div class="d-flex" id="content-wrapper">
 
     <!-- Sidebar -->
-    <div id="sidebar-container" class="bg-light border-right">
-      <!--<div class="logo">
-        <h4 class="font-weight-bold mb-0">Templune</h4>
-      </div>-->
-      <div class="menu list-group-flush">
-        <a href="Index.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
-        <a href="finances.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
-        <a href="events.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
-        <a href="E-mail.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
-        <a href="requesment.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Requerimientos</a>
-        <a href="settings.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
+    <div id="sidebar-container" class="border-right" style="background-image: url(assets/img/sidebarContainer.jpg) !important; background-size:130% ;">
+      <div class="logo">
+        <img id="icon-sidebar" src="assets\img\Icon.png">
+      </div>
+      <div class="menu list-group-flush ">
+
+        <a href="Index.jsp" class="mtextB text-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
+        <a href="finances.html" class="mtextB text-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
+        <a href="events.html" class="mtextB text-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
+
+        <!--APARTADO DEL BOTON DESPLEGABLE DONDE SE PUEDE INGRESAR Y VISUALIZAR LA BANDEJA DE ENTRADA-->
+        <div class="accordion border-0 " id="accordionExample" style="background-color:rgba(255, 255, 255, 0) !important; ">
+          <div class="card border-0" style="background-color:rgba(255, 255, 255, 0) !important; ">
+            <div class="card-header border-0 padding-0" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left border-0 padding-0" id="boton-bandeja" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <a href="#" class="mtextB text-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+                </button>
+              </h2>
+            </div>
+            <!-- APARTADO DE FUNCIONALIDADES Y BOTONES DE LA BANDEJA DE ENTRADA-->
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <a href="E-mail.html" class="mtextA text-danger alert alert-danger border-0"><i class="fas fa-tablet-alt"></i> Recibidos <small><span class="badge badge-pill badge-muted text-danger">25</span></small></a>
+                <a href="#" class="mtext text-light border-0"><i class="far fa-clock"></i> Pospuestos <small><span class="badge badge-pill badge-muted">3</span></small></a>
+                <a href="#" class="mtext text-light border-0"><i class="fas fa-envelope"></i> Redactar Mensaje</a>
+                <a href="#" class="mtext text-light border-0"><i class="fas fa-star"></i> Destacados</a>
+                <a href="#" class="mtext text-light border-0"><i class="far fa-bell"></i> Importantes <small><span class="badge badge-pill badge-muted">1</span></small></a>
+                <a href="#" class="mtext text-light border-0"><i class="far fa-paper-plane"></i> Enviados</a>
+                <a href="#" class="mtext text-light border-0"><i class="fas fa-trash-alt"></i> Papelera <small><span class="badge badge-pill">8</span></small></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="requesment.html" class="mtextB text-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Requerimientos</a>
+        <a href="settings.html" class="mtextB text-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
+
       </div>
     </div>
     <!-- Sidebar end-->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper" class="w-100 bg-light-blue">
+    <div id="page-content-wrapper" class="table-responsive" style="background: url(assets/img/pageContent.jpg)
+    !important; background-size: cover !important; background-repeat: no-repeat !important; width:
+    100% !important; margin: 0 auto !important;" class="w-100 bg-light-blue">
       <!-- Nav bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
         <div class="container">
@@ -55,11 +85,11 @@
                 </form>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link text-white dropdown-toggle btn btn-outline-info " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Usuario
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Mi perfil</a>
+                  <a class="dropdown-item" href="perfil.html">Mi perfil</a>
                   <a class="dropdown-item" href="#">Archivos</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="Login.html">Cerrar sesión</a>
